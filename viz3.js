@@ -124,9 +124,9 @@ stroke.then(function (data) {
       .style("width", 20);
 
     svg.append('text')
-      .attr('x', width / 2 - 100)
+      .attr('x', width / 2 - 125)
       .attr('y', height - 145)
-      .text('Average Glucose Level for Adults')
+      .text('Typical Glucose Level Range for Healthy Adults')
       .attr("stroke", "blue")
       .attr("font-size", 15)
       .attr("font-weight", 200)
@@ -139,10 +139,32 @@ stroke.then(function (data) {
       .attr("stroke", "green")
       .style("fill", "green")
       .style("opacity", 0.2)
+
+    svg.append("rect")
+      .attr("x", 50)
+      .attr("y", 758)
+      .attr("height", 10)
+      .attr("width", 770 - 50)
+      .attr("stroke", "white")
+      .style("fill", "white")
   });
 
   svg.append('text')
     .attr('x', width / 2 - 120)
     .attr('y', 0)
     .text('Average Glucose Level by Stroke Status')
+
+  svg.append('text')
+    .attr('x', width / 2 + 123)
+    .attr('y', yscale(50))
+    .text('No Stroke')
+    .attr("font-size", 12)
+    .attr("font-weight", 400)
+
+  svg.append('text')
+    .attr('x', 233)
+    .attr('y', yscale(50))
+    .text('Had Stroke')
+    .attr("font-size", 12)
+    .attr("font-weight", 400)
 });
