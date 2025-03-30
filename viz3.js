@@ -2,6 +2,9 @@ const stroke = d3.csv("stroke-data.csv");
 
 stroke.then(function (data) {
 
+  // filter data to only include people above 16 years old (like the graph)
+  data = data.filter(d => +d.age > 16);
+
   data.forEach(function (d) {
     d.avg_glucose_level = +d.avg_glucose_level;
   });
@@ -124,9 +127,9 @@ stroke.then(function (data) {
       .style("width", 20);
 
     svg.append('text')
-      .attr('x', width / 2 - 125)
+      .attr('x', width / 2 - 203)
       .attr('y', height - 145)
-      .text('Typical Glucose Level Range for Healthy Adults')
+      .text('Typical Glucose Level Range for Healthy People over the age of 16')
       .attr("stroke", "blue")
       .attr("font-size", 15)
       .attr("font-weight", 200)
@@ -150,9 +153,9 @@ stroke.then(function (data) {
   });
 
   svg.append('text')
-    .attr('x', width / 2 - 120)
+    .attr('x', width / 2 - 230)
     .attr('y', 0)
-    .text('Average Glucose Level by Stroke Status')
+    .text('Average Glucose Level by Stroke Status for People over the age of 16')
 
   svg.append('text')
     .attr('x', width / 2 + 123)
