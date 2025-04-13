@@ -134,6 +134,7 @@ h3 {
   font-size: 1.4rem;
   color: var(--black);
   margin-bottom: 20px;
+  text-align: center;
 }
 
 p {
@@ -188,4 +189,20 @@ footer p {
 
 section {
   padding-bottom: 5em;
+}
+
+#barplot {
+  margin-left: 20em;
+}
+
+#barplot-age {
+  margin-left: 13em;
+}
+
+#barplot-heart {
+  margin-left: 13em;
+}
+
+#boxplot {
+  margin-left: 13em;
 }
