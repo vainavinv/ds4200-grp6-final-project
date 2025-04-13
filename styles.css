@@ -193,6 +193,7 @@ section {
 
 #barplot {
   margin-left: 20em;
+  margin-bottom: 2em;
 }
 
 #barplot-age {
@@ -201,6 +202,8 @@ section {
 
 #barplot-heart {
   margin-left: 13em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 #boxplot {
