@@ -26,8 +26,12 @@
     <main>
       <section>
         <div class="visualization-container">
-          <iframe src="scatter_nostroke.html" width="100%" height="800" frameborder="0"></iframe>
-          <iframe src="has_stroke_chart.html" width="100%" height="800" frameborder="0"></iframe>
+          <div class="scatter-plots">
+            <h3>Glucose Level vs BMI (People who have not had strokes)</h3>
+            <iframe id="scatter-no-stroke" src="scatter_nostroke.html" style="margin-left: 21em" width="80%" height="500" frameborder="0"></iframe>
+            <h3>Glucose Level vs BMI (People who have had strokes)</h3>
+            <iframe id="scatter-stroke" src="has_stroke_chart.html" style="margin-left: 21em" width="80%" height="500" frameborder="0"></iframe>
+          </div>
         </div>
         <p>
           These figures are scatterplots of BMI plotted against average glucose level, 
